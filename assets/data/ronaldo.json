@@ -1,0 +1,21 @@
+{
+  "national_team": { "caps": 225, "goals": 143, "as_of": "2025-10-13" },
+  "al_nassr": { "games": 119, "goals": 106, "as_of": "2025-10-26" },
+  "major_team_honours": [
+    {"team":"Portugal","trophies":["UEFA EURO 2016","UEFA Nations League 2019","UEFA Nations League 2025"]},
+    {"team":"Manchester United","trophies":["Premier League 2006–07","Premier League 2007–08","Premier League 2008–09","FA Cup 2003–04","League Cup 2005–06","League Cup 2008–09","FA Community Shield 2007","UEFA Champions League 2007–08","FIFA Club World Cup 2008"]},
+    {"team":"Real Madrid","trophies":["La Liga 2011–12","La Liga 2016–17","Copa del Rey 2010–11","Copa del Rey 2013–14","Supercopa de España 2012","Supercopa de España 2017","UEFA Champions League 2013–14","UEFA Champions League 2015–16","UEFA Champions League 2016–17","UEFA Champions League 2017–18","UEFA Super Cup 2014","UEFA Super Cup 2017","FIFA Club World Cup 2014","FIFA Club World Cup 2016","FIFA Club World Cup 2017"]},
+    {"team":"Juventus","trophies":["Serie A 2018–19","Serie A 2019–20","Coppa Italia 2020–21","Supercoppa Italiana 2018","Supercoppa Italiana 2020"]},
+    {"team":"Sporting CP","trophies":["Supertaça Cândido de Oliveira 2002"]},
+    {"team":"Al Nassr","trophies":["Arab Club Champions Cup 2023"]}
+  ],
+  "individual_awards": {
+    "ballon_dor": [2008,2013,2014,2016,2017],
+    "others": [
+      "European Golden Shoe (multiple seasons)",
+      "Premier League Player of the Season",
+      "La Liga Best Player awards (various seasons)",
+      "Serie A MVP 2018–19"
+    ]
+  }
+}

@@ -1,0 +1,1056 @@
+/* ===============================================*/
+/*    Custom Theme Variables & Typography        */
+/* ===============================================*/
+
+:root {
+  --primary: #3B82F6;
+  --secondary: #0EA5E9;
+  --accent: #22C55E;
+  --text: #1F2937;
+  --bg: #F8FAFC;
+  
+  /* Responsive Typography */
+  --fs-body: clamp(0.98rem, 0.4vw + 0.9rem, 1.05rem);
+  --fs-h1: clamp(1.8rem, 3.2vw + 1.2rem, 3rem);
+  --fs-h2: clamp(1.4rem, 2.2vw + 1rem, 2.1rem);
+  --fs-h3: clamp(1.2rem, 1.6vw + 0.9rem, 1.5rem);
+  --lh: 1.55;
+}
+
+/* ===============================================*/
+/*    Typography                                  */
+/* ===============================================*/
+
+/* Headings - Poppins */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4,
+.display-5, .display-6 {
+  font-family: "Poppins", sans-serif !important;
+  color: var(--text) !important;
+}
+
+/* Body text - Inter */
+body, p, span, div, 
+.form-control, .form-label,
+.navbar-nav .nav-link,
+.btn, .card, .list-unstyled li {
+  font-family: "Inter", sans-serif !important;
+  color: var(--text) !important;
+}
+
+/* Responsive Typography Scaling */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: var(--fs-body);
+  line-height: var(--lh);
+  -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+/* ===============================================*/
+/*    Background Colors                           */
+/* ===============================================*/
+
+body {
+  background-color: var(--bg) !important;
+}
+
+.bg-white {
+  background-color: var(--bg) !important;
+}
+
+/* ===============================================*/
+/*    Button Styles                               */
+/* ===============================================*/
+
+/* Primary buttons */
+.btn-primary,
+.btn-success,
+.btn-dark {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-dark:hover {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: white !important;
+}
+
+/* Outline buttons */
+.btn-outline-primary,
+.btn-outline-light {
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-light:hover {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+/* ===============================================*/
+/*    Link Styles                                 */
+/* ===============================================*/
+
+a {
+  color: var(--primary) !important;
+}
+
+a:hover {
+  color: var(--secondary) !important;
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+  color: var(--text) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--secondary) !important;
+}
+
+/* ===============================================*/
+/*    Section Highlights                          */
+/* ===============================================*/
+
+/* Section titles and highlights */
+.text-success,
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* ===============================================*/
+/*    Responsive Layout & Containers               */
+/* ===============================================*/
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Container and gutter responsive styles */
+.container, .section, .hero__content {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+/* Table wrapper for horizontal scrolling */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap > table {
+  min-width: 640px;
+}
+
+/* ===============================================*/
+/*    Responsive Navigation                        */
+/* ===============================================*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+}
+
+.nav a {
+  padding: .4rem .6rem;
+}
+
+/* ===============================================*/
+/*    Responsive Buttons & Tap Targets             */
+/* ===============================================*/
+
+a, button {
+  min-height: 44px;
+}
+
+.btn, a.btn {
+  padding: .6rem 1rem;
+  border-radius: 10px;
+}
+
+/* ===============================================*/
+/*    Responsive Forms                             */
+/* ===============================================*/
+
+.form-control, input, textarea {
+  width: 100%;
+}
+
+/* ===============================================*/
+/*    Responsive Breakpoints                      */
+/* ===============================================*/
+
+/* Small phones (360px) */
+@media (max-width: 360px) {
+  .container, .section, .hero__content {
+    padding-inline: 0.75rem;
+  }
+  
+  .btn, a.btn {
+    padding: .5rem .75rem;
+    font-size: .9rem;
+  }
+  
+  .kpi {
+    padding: .5rem .75rem;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  .kpis {
+    flex-direction: column;
+  }
+  
+  .hero__image {
+    margin-top: .75rem;
+  }
+  
+  .timeline__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .honours__grid {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* Small laptops (1024px) */
+@media (max-width: 1024px) {
+  .timeline__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .honours__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktops (1280px+) - already handled by max-width on containers */
+
+/* ===============================================*/
+/*    Responsive Fixes Documentation               */
+/* ===============================================*/
+
+/*
+Responsive fixes applied:
+- Typography: Added clamp() functions for fluid scaling across breakpoints
+- Containers: Added responsive padding with clamp() and max-width constraints
+- Tables: Wrapped in .table-wrap for horizontal scrolling on small screens
+- Navigation: Added flex-wrap and responsive gap for mobile menu wrapping
+- Buttons: Added min-height for touch targets and responsive padding
+- Forms: Ensured 100% width on form controls for mobile
+- Grids: Stacked two-column layouts to single column on tablets and below
+- Images: Maintained max-width: 100% for responsive scaling
+- KPIs: Changed to column layout on mobile for better readability
+- Records toolbar: Stacked vertically on mobile with full-width search
+- Timeline: Single column layout on mobile and tablet
+- Honours: Single column layout on tablet and below
+*/
+
+/* Accent elements */
+.fa-solid.fa-circle-check {
+  color: var(--accent) !important;
+}
+
+/* ===============================================*/
+/*    Form Elements                               */
+/* ===============================================*/
+
+.form-control:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25) !important;
+}
+
+.form-label {
+  color: var(--text) !important;
+}
+
+/* ===============================================*/
+/*    Card Styles                                 */
+/* ===============================================*/
+
+.card {
+  background-color: white !important;
+  border-color: rgba(31, 41, 55, 0.1) !important;
+}
+
+.card-body {
+  color: var(--text) !important;
+}
+
+/* ===============================================*/
+/*    Dark Theme Overrides                        */
+/* ===============================================*/
+
+/* Dark sections maintain their dark background */
+.bg-dark {
+  background-color: #1F2937 !important;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark p,
+.bg-dark span {
+  color: white !important;
+}
+
+/* ===============================================*/
+/*    Footer Styles                               */
+/* ===============================================*/
+
+footer {
+  background-color: #1F2937 !important;
+}
+
+footer h3,
+footer h4,
+footer h5 {
+  color: white !important;
+}
+
+footer p,
+footer a {
+  color: #9CA3AF !important;
+}
+
+footer a:hover {
+  color: var(--secondary) !important;
+}
+
+/* ===============================================*/
+/*    Text Color Utilities                        */
+/* ===============================================*/
+
+.text-gray {
+  color: #6B7280 !important;
+}
+
+.text-light {
+  color: #F3F4F6 !important;
+}
+
+.text-300 {
+  color: #D1D5DB !important;
+}
+
+.text-200 {
+  color: #E5E7EB !important;
+}
+
+.text-100 {
+  color: #F3F4F6 !important;
+}
+
+/* ===============================================*/
+/*    Responsive Adjustments                      */
+/* ===============================================*/
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: calc(1rem + 0.5vw) !important;
+  }
+}
+
+/* ===============================================*/
+/*    Reveal Animation Styles                     */
+/* ===============================================*/
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ===============================================*/
+/*    Polish Styles for Buttons and Cards         */
+/* ===============================================*/
+
+.btn, a.btn {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.btn:hover, a.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible, a.btn:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 160ms ease;
+}
+
+/* ===============================================*/
+
+/* ===============================================*/
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+picture {
+  display: block;
+}
+
+/* ===============================================*/
+
+.honours__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.honours__col h2 {
+  margin-bottom: .25rem;
+  color: var(--text);
+}
+
+.team-card,
+.awards-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  margin-bottom: 1rem;
+}
+
+.team-card h4,
+.awards-card h4 {
+  margin: 0 0 .5rem;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.trophy-list,
+.award-list {
+  margin: .5rem 0 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.trophy-list li,
+.award-list li {
+  margin-bottom: .25rem;
+  padding-left: .5rem;
+  position: relative;
+}
+
+.trophy-list li::before,
+.award-list li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: -.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  margin: .35rem .35rem 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  color: var(--text);
+}
+
+.badge strong {
+  color: var(--primary);
+}
+
+.honours__note {
+  margin: 1rem 0 2rem;
+  padding: .75rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.awards-summary {
+  margin-top: 1rem;
+}
+
+.muted {
+  opacity: .75;
+  color: var(--text);
+  font-size: .9rem;
+}
+
+@media (max-width: 980px) {
+  .honours__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================================*/
+
+
+.records {
+  margin: 1rem 0 2rem;
+}
+
+.records h2 {
+  margin: 1.5rem 0 .5rem;
+  color: var(--text);
+}
+
+.table-records {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.table-records th,
+.table-records td {
+  padding: .6rem .7rem;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-records th {
+  font-size: .92rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .7;
+  color: var(--text);
+  background: rgba(0,0,0,.02);
+}
+
+.table-records td {
+  color: var(--text);
+}
+
+.table-records tbody tr:hover {
+  background: rgba(0,0,0,.02);
+}
+
+.records-method {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  margin: 1rem 0 2rem;
+  color: var(--text);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Removed duplicate media query - now handled in responsive breakpoints section */
+
+/* ===============================================*/
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0,0,0,.08);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 2rem;
+  margin: 1.25rem 0;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .5rem;
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(59,130,246,.12);
+}
+
+.timeline__item h3 {
+  margin: 0 0 .25rem;
+  color: var(--text);
+}
+
+.timeline__meta {
+  font-size: .9rem;
+  opacity: .75;
+  margin-bottom: .5rem;
+  color: var(--text);
+}
+
+.timeline__grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeline__grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* Removed duplicate media query - now handled in responsive breakpoints section */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .75rem 0 1.25rem;
+}
+
+.chip {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  font-size: .9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  color: var(--text);
+}
+
+.chip strong {
+  color: var(--primary);
+}
+
+.muted {
+  opacity: .7;
+  font-size: .85rem;
+}
+
+.neutral {
+  list-style: none;
+  padding-left: 0;
+}
+
+.neutral li {
+  margin-bottom: .5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.neutral li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+}
+
+.neutral a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.neutral a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* ===============================================*/
+
+.hero--cr7 {
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+  padding: clamp(2rem, 6vw, 6rem) 0;
+}
+
+.hero__content {
+  max-width: 720px;
+}
+
+.hero__subtitle {
+  margin-top: .5rem;
+  color: var(--text);
+  opacity: .85;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: .75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.kpis {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 0;
+  flex-wrap: wrap;
+}
+
+.kpi {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.kpi__label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .75;
+  color: var(--text);
+}
+
+.kpi__value {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: .35rem;
+  color: var(--text);
+}
+
+.kpi__sep {
+  opacity: .6;
+  font-weight: 500;
+}
+
+.kpi__asof {
+  font-size: .75rem;
+  opacity: .7;
+  margin-top: .25rem;
+  color: var(--text);
+}
+
+.hero__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .hero__ctas {
+    justify-content: flex-start;
+  }
+  
+  .kpis {
+    flex-direction: column;
+    gap: .75rem;
+  }
+  
+  .kpi {
+    min-width: auto;
+    width: 100%;
+  }
+}
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===============================================*/
+/*    Accessibility Enhancements                  */
+/* ===============================================*/
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: .4rem .6rem;
+  background: #fff;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* Visually hidden helper class */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced focus styles */
+:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* ===============================================*/
+
+/* Ensure sufficient contrast for AA+ compliance */
+.btn-primary,
+.btn-success,
+.btn-dark {
+  color: white !important;
+}
+
+.btn-outline-primary,
+.btn-outline-light {
+  color: var(--primary) !important;
+}
+
+/* Focus indicators */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+  outline: 2px solid var(--primary) !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast text for better readability */
+.text-dark {
+  color: var(--text) !important;
+}
+
+/* Ensure proper contrast on colored backgrounds */
+.bg-primary {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+  color: white !important;
+}
+
+.bg-accent {
+  background-color: var(--accent) !important;
+  color: white !important;
+}
+
+/* Override any existing color classes for consistency */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* ===============================================*/
+/*    Responsive Layout & Containers               */
+/* ===============================================*/
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Container and gutter responsive styles */
+.container, .section, .hero__content {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+/* Table wrapper for horizontal scrolling */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap > table {
+  min-width: 640px;
+}
+
+/* ===============================================*/
+/*    Responsive Navigation                        */
+/* ===============================================*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+}
+
+.nav a {
+  padding: .4rem .6rem;
+}
+
+/* ===============================================*/
+/*    Responsive Buttons & Tap Targets             */
+/* ===============================================*/
+
+a, button {
+  min-height: 44px;
+}
+
+.btn, a.btn {
+  padding: .6rem 1rem;
+  border-radius: 10px;
+}
+
+/* ===============================================*/
+/*    Responsive Forms                             */
+/* ===============================================*/
+
+.form-control, input, textarea {
+  width: 100%;
+}
+
+/* ===============================================*/
+/*    Responsive Breakpoints                      */
+/* ===============================================*/
+
+/* Small phones (360px) */
+@media (max-width: 360px) {
+  .container, .section, .hero__content {
+    padding-inline: 0.75rem;
+  }
+  
+  .btn, a.btn {
+    padding: .5rem .75rem;
+    font-size: .9rem;
+  }
+  
+  .kpi {
+    padding: .5rem .75rem;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  .kpis {
+    flex-direction: column;
+  }
+  
+  .hero__image {
+    margin-top: .75rem;
+  }
+  
+  .timeline__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .honours__grid {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* Small laptops (1024px) */
+@media (max-width: 1024px) {
+  .timeline__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .honours__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktops (1280px+) - already handled by max-width on containers */
+
+/* ===============================================*/
+/*    Responsive Fixes Documentation               */
+/* ===============================================*/
+
+/*
+Responsive fixes applied:
+- Typography: Added clamp() functions for fluid scaling across breakpoints
+- Containers: Added responsive padding with clamp() and max-width constraints
+- Tables: Wrapped in .table-wrap for horizontal scrolling on small screens
+- Navigation: Added flex-wrap and responsive gap for mobile menu wrapping
+- Buttons: Added min-height for touch targets and responsive padding
+- Forms: Ensured 100% width on form controls for mobile
+- Grids: Stacked two-column layouts to single column on tablets and below
+- Images: Maintained max-width: 100% for responsive scaling
+- KPIs: Changed to column layout on mobile for better readability
+- Records toolbar: Stacked vertically on mobile with full-width search
+- Timeline: Single column layout on mobile and tablet
+- Honours: Single column layout on tablet and below
+*/
